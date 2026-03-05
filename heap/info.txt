@@ -1,0 +1,3 @@
+Heap is basically a binary tree with speacial property :
+there are two types of heap like min heap and max heap 
+priority queue is not a data type but can be implemented using heap 
