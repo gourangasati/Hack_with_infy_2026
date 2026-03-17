@@ -11,17 +11,16 @@ def food(A):
     for ite in pos:
         count = 0
         item = pos[ite]
-        for i,val in enumerate(item):
-            if i== 0:
-                count+= 1
-                continue
-            if val-item[i-1]> 1:
+        last = -2
+        for val in item:
+            if val - last > 1 :
                 count += 1
+                last = val
         if count > max_count :
             max_count = count
             max_item = ite
         if count == max_count:
             max_item = min(max_item , ite)
     return max_item
-A = [2,1,2,1,2,1,2,1,2]
+A = [0,2,3,2]
 print(food(A))
